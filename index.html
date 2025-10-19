@@ -1914,26 +1914,124 @@
 
 
 
-<!-- Video Demo Section -->
-<section class="video-demo" id="video">
-    <div class="container">
-        <div class="section-title">
-            <h2>See It In Action</h2>
-            <p>Watch how VolumeGlass transforms your Mac's volume control</p>
+    <!-- Video Demo Section - Enhanced -->
+    <section class="video-demo" id="video" style="padding: 120px 20px; background: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="section-title">
+                <h2>See It In Action</h2>
+                <p>Watch how VolumeGlass transforms your Mac's volume experience</p>
+            </div>
+            
+            <!-- Main Video Container -->
+            <div class="video-wrapper scroll-reveal" style="max-width: 950px; margin: 0 auto;">
+                <!-- Video with Enhanced Styling -->
+                <div class="video-player-container" style="position: relative; background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); border-radius: 28px; padding: 20px; box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);">
+                    
+                    <!-- Video Frame -->
+                    <div style="position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4); background: #000;">
+                        <video 
+                            id="demoVideo"
+                            controls 
+                            preload="metadata"
+                            poster="volumeglass-demo-poster.jpg"
+                            style="width: 100%; height: auto; display: block; border-radius: 18px;">
+                            <source src="volumeglass-demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        <!-- Play Button Overlay (appears before playing) -->
+                        <div id="playOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); cursor: pointer; transition: all 0.3s ease;" onclick="document.getElementById('demoVideo').play(); this.style.display='none';">
+                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; box-shadow: 0 10px 40px rgba(255,255,255,0.3);">
+                                <svg width="32" height="32" viewBox="0 0 20 20" fill="#0a0a0a" style="margin-left: 4px;">
+                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Info Badge -->
+                    <div style="position: absolute; top: 35px; right: 35px; background: rgba(255,255,255,0.12); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: white; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20" style="display: inline-block; margin-right: 6px; vertical-align: middle;">
+                            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
+                        </svg>
+                        Silent Demo
+                    </div>
+                </div>
+                
+                <!-- Video Description -->
+                <div style="margin-top: 32px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 14px;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>30 seconds</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 14px;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>No audio</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 14px;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>1080p HD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature Highlights -->
+                <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <div style="background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; text-align: center; transition: all 0.3s ease;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">✨</div>
+                        <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Hover Reveal</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; text-align: center; transition: all 0.3s ease;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🎚️</div>
+                        <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Smooth Dragging</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; text-align: center; transition: all 0.3s ease;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">⚡</div>
+                        <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Quick Actions</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; text-align: center; transition: all 0.3s ease;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+                        <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Glass Design</div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <script>
+        // Auto-hide play overlay when video starts
+        const video = document.getElementById('demoVideo');
+        const overlay = document.getElementById('playOverlay');
         
-        <div class="video-container scroll-reveal" style="max-width: 900px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
-            <video controls style="width: 100%; height: auto; display: block;">
-                <source src="volumeglass-demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        
-        <p style="text-align: center; margin-top: 30px; color: rgba(255,255,255,0.6); font-size: 14px;">
-            Silent demo showing VolumeGlass features
-        </p>
-    </div>
-</section>
+        if (video && overlay) {
+            video.addEventListener('play', () => {
+                overlay.style.display = 'none';
+            });
+            
+            video.addEventListener('pause', () => {
+                if (video.currentTime === 0) {
+                    overlay.style.display = 'flex';
+                }
+            });
+            
+            video.addEventListener('ended', () => {
+                overlay.style.display = 'flex';
+            });
+        }
+    </script>
+
 
 
     <!-- Interactive Demo -->
