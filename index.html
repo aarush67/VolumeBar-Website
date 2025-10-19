@@ -2030,19 +2030,45 @@
         </div>
     </section>
 
+<!-- Newsletter Section - Buttondown Direct Integration -->
 <section class="newsletter" id="newsletter">
     <div class="container">
         <div class="newsletter-card scroll-reveal">
             <h2>Stay Updated</h2>
             <p>Get notified about new features, updates, and tips for VolumeGlass</p>
             
-            <form class="newsletter-form" action="https://formspree.io/f/xgvnqzkv" method="POST">
-                <input type="email" name="email" class="newsletter-input" placeholder="Enter your email" required>
-                <button type="submit" class="newsletter-submit">Subscribe</button>
+            <!-- Buttondown Embedded Form -->
+            <form
+                action="https://buttondown.email/api/emails/embed-subscribe/aarush"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/aarush', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+                class="newsletter-form"
+                style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto;">
+                
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="bd-email" 
+                    class="newsletter-input"
+                    placeholder="Enter your email"
+                    required 
+                    aria-label="Email address">
+                
+                <button 
+                    type="submit" 
+                    class="newsletter-submit">
+                    Subscribe
+                </button>
             </form>
+            
+            <p style="margin-top: 15px; font-size: 13px; color: rgba(255,255,255,0.5);">
+                We'll send you updates about VolumeGlass releases and features
+            </p>
         </div>
     </div>
 </section>
+
 
 
     <!-- System Requirements -->
